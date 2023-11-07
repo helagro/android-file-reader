@@ -92,6 +92,7 @@ class MainActivity : AppCompatActivity() {
             ?: return Toast.makeText(this, "File not found", Toast.LENGTH_SHORT).show()
 
         Log.d(TAG, "onSendBtnClicked: $path")
+        textInput.setText("")
         val intent = Intent(this, ReaderActivity::class.java)
         intent.putExtra("path", path)
         startActivity(intent)
