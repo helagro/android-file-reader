@@ -57,6 +57,10 @@ class MainActivity : AppCompatActivity() {
         sendBtn.setOnClickListener {
             onSendBtnClicked()
         }
+        val clearBtn = findViewById<ImageButton>(R.id.clear_btn)
+        clearBtn.setOnClickListener {
+            textInput.setText("")
+        }
     }
 
     private fun hasStoragePermission(): Boolean {
